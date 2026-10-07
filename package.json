@@ -1,0 +1,30 @@
+{
+  "name": "bankit-backend-challenge",
+  "version": "1.0.0",
+  "description": "Bankit transfer service implemented with JavaScript, Express, TypeORM and MySQL",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migration:run": "typeorm migration:run -d src/config/dataSource.js",
+    "migration:revert": "typeorm migration:revert -d src/config/dataSource.js",
+    "test": "jest --runInBand --detectOpenHandles",
+    "test:watch": "jest --watch",
+    "lint": "eslint src tests"
+  },
+  "dependencies": {
+    "class-validator": "^0.14.2",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.27"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
